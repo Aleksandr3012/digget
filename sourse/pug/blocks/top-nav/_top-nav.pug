@@ -20,10 +20,15 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
+			.row.align-items-center
+				.col-auto
+					+e.logo(href="#")
+						img(src="img/@2x/logo.png", alt="logo")
 				.col
 					+mnu()
 					+mob-mnu()
+				.col-auto
+					+e.btn(href="#") заполнить бриф
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span

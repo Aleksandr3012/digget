@@ -21,10 +21,11 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
+				.col
+					+mnu()
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
-				.col
-					+mnu()
+
 					
 	// end top-nav

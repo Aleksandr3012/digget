@@ -303,6 +303,29 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+
+	let articalsSlider = new Swiper('.sBrif__slider--js', {
+		slidesPerView: 'auto',
+		breakpoints: {
+			768: {
+				spaceBetween: 25,
+			},
+			320 : {
+				spaceBetween: 16,
+			},
+		},
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 8,
+		},
+
+		//
+		// freeMode: true,
+		freeModeMomentum: true,
+		watchOverflow: true,
+	});
 	// modal window
 
 };

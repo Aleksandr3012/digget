@@ -301,7 +301,27 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
-	})); // modal window
+	}));
+	var articalsSlider = new Swiper('.sBrif__slider--js', {
+		slidesPerView: 'auto',
+		breakpoints: {
+			768: {
+				spaceBetween: 25
+			},
+			320: {
+				spaceBetween: 16
+			}
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 8
+		},
+		//
+		// freeMode: true,
+		freeModeMomentum: true,
+		watchOverflow: true
+	}); // modal window
 }
 
 ;

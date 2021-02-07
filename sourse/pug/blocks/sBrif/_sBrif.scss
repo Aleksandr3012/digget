@@ -1,0 +1,106 @@
+// start .sBrif
+.sBrif {
+	--sPT: 0;
+	// --sPB: ;
+	// --sTPB: ;
+
+	&__slider {
+		margin-top: -200px;
+		overflow: visible;
+	}
+
+	&__slide {
+		background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+		backdrop-filter: blur(42px);
+		border-radius: 8px;
+		padding: rem(32) rem(43) rem(32);
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		@each $breakpoint, $container-max-width in $container-max-widths {
+			@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+				--containerW: #{$container-max-width};
+			}
+		};
+		width: 260px;
+		@include media-breakpoint-up(lg) {
+			width: calc(var(--containerW) / 5.5);
+		}
+	}
+
+	&__btn {
+		display: block;
+		margin-top: auto;
+		padding-bottom: rem(12);
+		text-align: center;
+		border-bottom: solid 4px #FFBA72;
+		color: $body-color;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: $h6-font-size;
+
+		.icon {
+			margin-left: rem(8);
+			fill: none;
+			stroke: currentColor;
+			// font-size: rem(6);
+			@include mt;
+		}
+
+		&:hover {
+			.icon {
+				margin-left: rem(20);
+				transform: rotate(360deg);
+			}
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: rem(22px);
+		position: relative;
+		text-align: center;
+		padding-bottom: rem(23);
+		margin-bottom: rem(15);
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			@include a-cent(x);
+			background: rgba(0, 0, 0, 0.1);
+			border-radius: rem(9px);
+			width: rem(114px);
+			height: 1px;
+		}
+	}
+
+	p {
+		text-align: center;
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			padding-left: rem(20);
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 7px;
+				width: 4px;
+				height: 4px;
+				background: #DFDFE0;
+				transform: rotate(-43.54deg);
+			}
+		}
+	}
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBrif

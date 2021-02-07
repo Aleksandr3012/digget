@@ -124,6 +124,10 @@ body {
 	font-family: $font-family-monospace;
 }
 
+.mono2 {
+	font-family: $font-family-monospace2;
+}
+
 .small {
 	font-size: $small;
 }
@@ -460,9 +464,17 @@ iframe {
 }
 
 .btn-primary {
+	filter: drop-shadow(15px 12px 28px rgba(255, 130, 0, 0.21));
 	background: linear-gradient(116.18deg, rgba(253, 141, 255, 0.4) 24.5%, rgba(253, 130, 11, 0.4) 74.69%), #FD820B;
 	border-radius: 4px;
-	color: #fff;
+	color: #fff !important;
 	font-weight: bold;
 	font-size: rem(18px);
+	text-transform: uppercase;
+	@include mt;
+	@extend .mono2;
+
+	&:hover {
+		filter: drop-shadow(1px 6px 10px rgba(255, 130, 0, 0.21));
+	}
 }

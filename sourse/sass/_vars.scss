@@ -1,5 +1,5 @@
 $em-base: 15px;
-$small: rem(14);
+$small: rem(13);
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
@@ -272,7 +272,7 @@ $body-text-align: null !default;
 
 $link-color: $primary !default;
 $link-decoration: underline !default;
-$link-shade-percentage: 20% !default;
+$link-shade-percentage: 40% !default;
 $link-hover-color: scale-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration: null !default;
 
@@ -403,7 +403,17 @@ sans-serif,
 "Segoe UI Symbol",
 "Noto Color Emoji" !default;
 
-$font-family-monospace: SFMono-Regular,
+$font-family-monospace: $mono,
+SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace !default;
+
+$font-family-monospace2: $mono2,
+SFMono-Regular,
 Menlo,
 Monaco,
 Consolas,

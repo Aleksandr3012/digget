@@ -1,8 +1,8 @@
 .top-nav {
-	position: sticky; 
-	top: 0;
-	left: 0;
-	z-index: 800;
+	// position: sticky; 
+	// top: 0;
+	// left: 0;
+	// z-index: 800;
 	padding-top: rem(40);
 	padding-bottom: rem(40);
 
@@ -11,10 +11,14 @@
 		margin-top: 0;
 	}
 
-
 	&__btn {
 		@extend .btn;
 		@extend .btn-primary;
+	}
+
+	&__logo {
+		display: block;
+		margin-right: rem(176);
 	}
 
 

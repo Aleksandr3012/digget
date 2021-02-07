@@ -2,9 +2,32 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
 			.row
-						
+				.col-auto
+					+b.section-title
+						+e.iconWrap 
+							+icon('pattern')
+						+e.imgWrap
+							img(src="img/svg/headerBlock-circle.svg", alt="")
+						h1 Улучшаем #[span ключевые показатели] бизнеса в&nbsp;digital, и&nbsp;не&nbsp;только
+					+e.btn(href="#") заполнить бриф
+				.col.d-none.d-lg-block
+					+e.shedule
+						+pic('schedule.png','','')
+						//- img.res-i(src="img/svg/schedule.svg", alt="")
+			+b.headerSquares
+				+e.orange--lg
+					+icon('square')
+				+e.orange--sm
+					+icon('square')
+				+e.green--sm
+					+icon('square')
+				+e.green--lg
+					+icon('square')
+				+e.blue--sm
+					+icon('square')
+				+e.blue--lg
+					+icon('square')
+
+
 	// end headerBlock

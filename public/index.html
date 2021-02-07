@@ -2,11 +2,14 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>digget</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Slab:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
@@ -21,11 +24,11 @@
 							</div>
 							<div class="col">
 								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item dropdown" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">УСЛУГИ</a>
+									<li class="navMenu__item dropdown" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">КОМПАНИЯ</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Компания</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">КОНТАКТЫ</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
 									</li>
 								</ul>
 								<div class="menu-mobile menu-mobile--js d-lg-none">
@@ -33,11 +36,11 @@
 									</div>
 									<div class="menu-mobile__inner">
 										<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="navMenu__item dropdown" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">УСЛУГИ</a>
+											<li class="navMenu__item dropdown" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги</a>
 											</li>
-											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">КОМПАНИЯ</a>
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Компания</a>
 											</li>
-											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">КОНТАКТЫ</a>
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
 											</li>
 										</ul>
 										<div class="text-right"></div>
@@ -58,15 +61,147 @@
 				<!-- start headerBlock-->
 				<div class="headerBlock section" id="headerBlock">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>headerBlock ds dfsdfdsfsd</h2>
+						<div class="row">
+							<div class="col-auto">
+								<div class="section-title">
+									<div class="section-title__iconWrap"> 
+										<svg class="icon icon-pattern ">
+											<use xlink:href="img/svg/sprite.svg#pattern"></use>
+										</svg>
+									</div>
+									<div class="section-title__imgWrap"><img src="img/svg/headerBlock-circle.svg" alt=""/>
+									</div>
+									<h1>Улучшаем <span>ключевые показатели</span> бизнеса в&nbsp;digital, и&nbsp;не&nbsp;только</h1>
+								</div><a class="headerBlock__btn" href="#">заполнить бриф</a>
+							</div>
+							<div class="col d-none d-lg-block">
+								<div class="headerBlock__shedule">
+									<!-- picture-->
+									<picture> 
+										<noscript class="loading-lazy">
+											<source type="image/webp" srcset="img/@2x/webp/schedule.webp"/><img src="img/@2x/schedule.png" alt="" loading="lazy"/>
+										</noscript>
+									</picture>
+									<!-- /picture-->
+								</div>
+							</div>
 						</div>
-						<div class="row"></div>
+						<div class="headerSquares">
+							<div class="headerSquares__orange headerSquares__orange--lg">
+								<svg class="icon icon-square ">
+									<use xlink:href="img/svg/sprite.svg#square"></use>
+								</svg>
+							</div>
+							<div class="headerSquares__orange headerSquares__orange--sm">
+								<svg class="icon icon-square ">
+									<use xlink:href="img/svg/sprite.svg#square"></use>
+								</svg>
+							</div>
+							<div class="headerSquares__green headerSquares__green--sm">
+								<svg class="icon icon-square ">
+									<use xlink:href="img/svg/sprite.svg#square"></use>
+								</svg>
+							</div>
+							<div class="headerSquares__green headerSquares__green--lg">
+								<svg class="icon icon-square ">
+									<use xlink:href="img/svg/sprite.svg#square"></use>
+								</svg>
+							</div>
+							<div class="headerSquares__blue headerSquares__blue--sm">
+								<svg class="icon icon-square ">
+									<use xlink:href="img/svg/sprite.svg#square"></use>
+								</svg>
+							</div>
+							<div class="headerSquares__blue headerSquares__blue--lg">
+								<svg class="icon icon-square ">
+									<use xlink:href="img/svg/sprite.svg#square"></use>
+								</svg>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- end headerBlock-->
 			</header>
 			<!-- end header-->
+			<!-- start sBrif-->
+			<div class="sBrif section" id="sBrif">
+				<div class="wavesBlock"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+				</div>
+				<div class="container">
+					<div class="sBrif__slider sBrif__slider--js swiper-container">
+						<div class="swiper-wrapper">
+								<div class="sBrif__slide swiper-slide">
+									<div class="sBrif__title">Создание сайта
+									</div>
+									<ul>
+										<li>Cоздание лендингов</li>
+										<li>Cоздание корпоративных сайтов</li>
+										<li>Cоздание интернет-магазинов</li>
+									</ul><a class="sBrif__btn" href="#">ЗАПОЛНИТЬ БРИФ
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg></a>
+								</div>
+								<div class="sBrif__slide swiper-slide">
+									<div class="sBrif__title">Дизайн и контент
+									</div>
+									<ul>
+										<li>Cоздание брендинга</li>
+										<li>Дизайн сайтов</li>
+										<li>Создание видео и фото контента</li>
+									</ul><a class="sBrif__btn" href="#">ЗАПОЛНИТЬ БРИФ
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg></a>
+								</div>
+								<div class="sBrif__slide swiper-slide">
+									<div class="sBrif__title">Продвижение
+									</div>
+									<ul>
+										<li>Контекстная реклама</li>
+										<li>SMM</li>
+										<li>SEO</li>
+										<li>SERM</li>
+									</ul><a class="sBrif__btn" href="#">ЗАПОЛНИТЬ БРИФ
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg></a>
+								</div>
+								<div class="sBrif__slide swiper-slide">
+									<div class="sBrif__title">ПОДДЕРЖКА
+									</div>
+									<ul>
+										<li>Аудит</li>
+										<li>Контент-поддержка</li>
+										<li>Техническая-поддержка</li>
+									</ul><a class="sBrif__btn" href="#">ЗАПОЛНИТЬ БРИФ
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg></a>
+								</div>
+								<div class="sBrif__slide swiper-slide">
+									<div class="sBrif__title">Проект под ключ
+									</div>
+									<p>К&nbsp;каждому бизнесу, мы&nbsp;подходим индивидуально и&nbsp;предлагаем нестандартные решения, которые подойдут именно Вам.</p><a class="sBrif__btn" href="#">ЗАПОЛНИТЬ БРИФ
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg></a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sBrif-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">
@@ -113,8 +248,6 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
-		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

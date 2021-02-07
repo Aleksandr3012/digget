@@ -1,19 +1,23 @@
 // start .sBrif
 .sBrif {
 	--sPT: 0;
-	// --sPB: ;
+	--sPB: #{rem(10)};
 	// --sTPB: ;
 
 	&__slider {
-		margin-top: -200px;
+		margin-top: -293px;
 		overflow: visible;
 	}
 
 	&__slide {
 		background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-		backdrop-filter: blur(42px);
+		backdrop-filter: blur(15px);
+		@supports not (backdrop-filter: blur(15px)) {
+			background-color: rgba($color: #fff, $alpha: 0.8);
+		}
+		border: solid 1px #F0F0F1;
 		border-radius: 8px;
-		padding: rem(32) rem(43) rem(32);
+		padding: rem(30) rem(23) rem(32);
 		display: flex;
 		flex-direction: column;
 		height: auto;
@@ -24,20 +28,30 @@
 		};
 		width: 260px;
 		@include media-breakpoint-up(lg) {
-			width: calc(var(--containerW) / 5.5);
+			width: calc(var(--containerW) / 5.39);
+		}
+
+		&:last-child {
+			margin-right: 0 !important;
 		}
 	}
 
 	&__btn {
 		display: block;
 		margin-top: auto;
-		padding-bottom: rem(12);
+		padding-bottom: rem(7);
 		text-align: center;
 		border-bottom: solid 4px #FFBA72;
 		color: $body-color;
 		text-decoration: none;
 		text-transform: uppercase;
-		font-size: $h6-font-size;
+		font-size: rem(19);
+		font-weight: bold;
+		@extend .mono2;
+		max-width: 215px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 
 		.icon {
 			margin-left: rem(8);
@@ -49,7 +63,7 @@
 
 		&:hover {
 			.icon {
-				margin-left: rem(20);
+				margin-left: rem(15);
 				transform: rotate(360deg);
 			}
 		}
@@ -61,7 +75,7 @@
 		position: relative;
 		text-align: center;
 		padding-bottom: rem(23);
-		margin-bottom: rem(15);
+		margin-bottom: rem(14);
 
 		&::before {
 			content: '';
@@ -77,14 +91,24 @@
 
 	p {
 		text-align: center;
+		max-width: rem(210);
+		margin-left: auto;
+		margin-right: auto;
+		@extend .mono2;
 	}
 
 	ul {
 		list-style: none;
+		padding-left: rem(10);
+		padding-bottom: rem(17);
 
 		li {
-			padding-left: rem(20);
+			font-size: $h6-font-size;
+			padding-left: rem(21);
 			position: relative;
+			line-height: calc(23/18);
+			padding-bottom: rem(7);
+			@extend .mono2;
 
 			&::before {
 				content: '';

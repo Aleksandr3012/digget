@@ -294,33 +294,47 @@ function eventHandler() {
 		// }
 
 	}), _defaultSl);
-	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+	var teamSlider = new Swiper('.sOurTeam__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// autoHeight: true,
 		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
+		freeModeMomentum: true,
+		breakpoints: {
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 71
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 40
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 16
+			}
+		},
+		navigation: {
+			nextEl: '.sOurTeam .swiper-button-next',
+			prevEl: '.sOurTeam .swiper-button-prev'
+		}
 	}));
 	var articalsSlider = new Swiper('.sBrif__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
 		slidesPerView: 'auto',
+		spaceBetween: 16,
 		breakpoints: {
 			768: {
 				spaceBetween: 25
-			},
-			320: {
-				spaceBetween: 16
 			}
 		},
 		//lazy
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 8
-		},
-		//
-		// freeMode: true,
-		freeModeMomentum: true,
-		watchOverflow: true
+		}
 	}); // modal window
 }
 

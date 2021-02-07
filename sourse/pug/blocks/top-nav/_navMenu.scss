@@ -1,11 +1,29 @@
 .navMenu{
 	display: flex;
 	list-style: none;
-	@include roww(54px);
+	@include roww(33px);
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
 	flex-wrap: wrap;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		&.dropdown {
+			&::after {
+				content: '';
+				display: block;
+				width: 13px;
+				height: 8px;
+				background-image: url('../img/svg/chevron-down.svg');
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				margin-left: rem(12);
+			}
+		}
+	}
 
 	&__link{
 		color: $body-color;

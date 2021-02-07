@@ -1,6 +1,7 @@
 // start .headerBlock
 .headerBlock {
-	--sPB: #{rem(476)};
+	--sPT: #{rem(118)};
+	--sPB: #{rem(400)};
 	// margin-bottom: 1px;
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
@@ -9,6 +10,7 @@
 
 	h1 {
 		font-weight: bold;
+		line-height: 132.2%;
 
 		span {
 			position: relative;
@@ -57,6 +59,11 @@
 		@extend .btn-primary;
 	}
 
+	&__shedule {
+		text-align: right;
+		margin-top: -10px;
+	}
+
 
 
 
@@ -83,21 +90,21 @@
 		}
 
 		&--sm {
-			top: rem(80px);
-			left: rem(300px);
+			top: rem(-47px);
+			left: rem(520px);
 
 			.icon {
-				font-size: rem(22);
+				font-size: rem(30);
 			}
 		}
 
 		&--lg {
-			bottom: 200px;
-			right: 220px;
-			transform: rotate(41deg);
+			bottom: -185px;
+			left: 250px;
+			transform: rotate(45deg);
 
 			.icon {
-				font-size: rem(91);
+				font-size: rem(135);
 			}
 		}
 	}
@@ -110,20 +117,20 @@
 		}
 
 		&--sm {
-			top: 370px;
-			left: 460px;
+			top: 245px;
+			left: 615px;
 			
 			.icon {
-				font-size: rem(31.7);
+				font-size: rem(45);
 			}
 		}
 
 		&--lg {
-			right: -50px;
-			bottom: 101px;
+			right: -70px;
+			bottom: -290px;
 
 			.icon {
-				font-size: rem(112);
+				font-size: rem(172);
 			}
 		}
 	}
@@ -136,20 +143,20 @@
 		}
 
 		&--sm {
-			right: -30px;
-			top: 355px;
+			right: -40px;
+			top: 200px;
 
 			.icon {
-				font-size: rem(22);
+				font-size: rem(30);
 			}
 		}
 
 		&--lg {
-			bottom: 241px;
-			left: 750px;
+			bottom: -145px;
+			left: 790px;
 
 			.icon {
-				font-size: rem(65);
+				font-size: rem(95);
 			}
 		}
 	}

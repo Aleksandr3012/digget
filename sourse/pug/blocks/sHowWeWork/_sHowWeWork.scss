@@ -1,0 +1,209 @@
+// start .sHowWeWork
+.sHowWeWork {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(64)};
+	--sTPB: #{rem(30)};
+
+	.section-title {
+		position: relative;
+		z-index: 2;
+
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			align-items: center;
+
+			h2 {
+				margin-bottom: 0;
+			}
+		}
+
+		p {
+			max-width: 563px;
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(163);
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	p {
+		@extend .mono2;
+		line-height: calc(19/15);
+	}
+
+	h6 {
+		line-height: calc(24/18);
+	}
+	
+	.container {
+		position: relative;
+	}
+
+	.row {
+		@include roww(25px);
+	}
+
+	&__iconWrap {
+		position: absolute;
+		left: 400px;
+		top: 150px;
+
+		.icon {
+			color: #F0F0F1;
+		}
+	}
+
+	&__item {
+		border-radius: 8px;
+		padding: rem(32) rem(32) rem(20);
+		position: relative;
+	}
+
+	&__col {
+		&:nth-child(1), &:nth-child(2) {
+			@include media-breakpoint-up(xl) {
+				max-width: 485px;
+			}
+		}
+
+		&:nth-child(1) {
+			.sHowWeWork__item {
+				padding-top: rem(70);
+			}
+
+			@include media-breakpoint-up(lg) {
+				p {
+					line-height: 150%;
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			.sHowWeWork__item {
+				padding-right: rem(40);
+				&:first-child {
+					margin-bottom: rem(28);
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			align-self: stretch;
+			max-width: 168px;
+
+			.sHowWeWork__item {
+				height: 100%;
+				padding: 0;
+				display: grid;
+				place-items: center;
+			}
+		}
+
+		&:nth-child(4) {
+
+			.sHowWeWork__item {
+				padding-top: rem(113);
+				padding-left: rem(27);
+				padding-right: rem(54);
+			}
+
+			h6 {
+				max-width: 288px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				p {
+					line-height: 150%;
+				}
+			}
+		}
+	}
+
+	&__chartCard {
+		position: absolute;
+		top: -70px;
+		right: -20px;
+	}
+
+	&__chart {
+		position: relative;
+		z-index: 2;
+		margin-left: -75px;
+		margin-right: -85px;
+		margin-bottom: 30px;
+
+	}
+
+	&__chartBg {
+		position: absolute;
+		bottom: rem(30);
+		width: 100%;
+		@include a-cent(x);
+		img {
+			width: 100%;
+		}
+	}
+
+	&__rocket {
+		position: absolute;
+		top: -35px;
+		left: 40px;
+	}
+
+	&__planet {
+		position: absolute;
+		right: -30px;
+		top: -45px;
+	}
+
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(md) {
+		picture {
+			display: none;
+		}
+	}
+} // end.sHowWeWork
+
+.howWeWorkSquares {
+
+	&__green, &__orange, &__blue {
+		position: absolute;
+	}
+
+	&__green {
+		.icon {
+			color: #FFBA72;
+		}
+
+		&--1 {}
+		&--2 {}
+		&--3 {}
+		&--4 {}
+	}
+
+	&__orange {
+		.icon {
+			color: #4FB058;
+		}
+
+		&--1 {}
+		&--2 {}
+		&--3 {}
+		&--4 {}
+		&--5 {}
+	}
+
+	&__blue {
+		.icon {
+			color: #3273FA;
+		}
+
+		&--1 {}
+		&--2 {}
+		&--3 {}
+	}
+}

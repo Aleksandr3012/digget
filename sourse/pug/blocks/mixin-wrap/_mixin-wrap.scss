@@ -1,22 +1,26 @@
  
 	  
 .soc{
-	margin: 0 rem(-5px);
 	display: flex;
+	@include roww(24px);
+
 	&__item{
 		text-decoration: none !important;
-		margin: 0 rem(5px);
-		vertical-align: middle;
+		background: #303338;
+		color: #fff;
+		border-radius: 8px;
+		width: rem(48px);
+		height: rem(48px);
 		@include mt;
-		display: block;
+		display: grid;
+		place-items: center;
 		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .6 ;
+			color: #FFBA72;
 		}
 		
 	}
 	.icon{
-	font-size: rem(30);
+		font-size: rem(15);
 	}
 	 
 

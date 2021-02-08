@@ -1,7 +1,11 @@
 // start .headerBlock
 .headerBlock {
-	--sPT: #{rem(118)};
-	--sPB: #{rem(400)};
+	--sPT: #{rem(25)};
+	--sPB: #{rem(300)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(119)};
+		--sPB: #{rem(400)};
+	}
 	// margin-bottom: 1px;
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
@@ -20,7 +24,10 @@
 				content: '';
 				position: absolute;
 				z-index: -1;
-				bottom: 3px;
+				bottom: -2px;
+				@include media-breakpoint-up(md) {
+					bottom: 3px;
+				}
 				left: -3%;
 				width: 106%;
 				height: 17px;
@@ -30,7 +37,10 @@
 	}
 
 	.section-title {
-		max-width: 623px;
+		max-width: 294px;
+		@include media-breakpoint-up(md) {
+			max-width: 623px;
+		}
 		position: relative;
 		z-index: 3;
 
@@ -47,7 +57,7 @@
 			right: 70%;
 
 			.icon {
-				color: rgba(255, 186, 114, 1);;
+				color: rgba(255, 186, 114, 1);
 			}
 		}
 	}

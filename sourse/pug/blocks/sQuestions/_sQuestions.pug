@@ -2,8 +2,49 @@ mixin sQuestions(data)
 	// start sQuestions
 	+b.SECTION.sQuestions.section#sQuestions&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sQuestions
+			+b.section-title
+				h2 Нас часто спрашивают
 				
-			.row
+			.row.justify-content-between
+				+e.lCol.col-lg
+					+questionItem(`Как быстро разрабатывается сайт?`,`В&nbsp;среднем, это 14-20 рабочих дней для лендинга или односраничных сайтов, 5-7 недель для корпоративных сайтов. Время на&nbsp;разработку интернет-магазинов рассчитывается индивидуально.`)(class="active")
+					+questionItem(`А&nbsp;у&nbsp;нас будет больше заказов от&nbsp;рекламы?`,`Мы&nbsp;гарантируем, что мы&nbsp;увеличим приток клиентов, которые интересуются вашей продукцией. Но&nbsp;обещать увеличение продаж&nbsp;&mdash; мы&nbsp;не&nbsp;можем, если вы&nbsp;не&nbsp;предоставляете нам доступ ко&nbsp;всем процессам, участвующим в&nbsp;воронке продаж.`)
+					+questionItem(`Как оценить результат сотрудничества?`,`У&nbsp;каждого проекта свои ключевые показатели эффективности (KPI), которые обговариваются индивидуально с&nbsp;заказчиком.`)
+					+questionItem(`А&nbsp;реклама в&nbsp;интернете вообще работает?`,`Разумеется, иначе мы&nbsp;бы сейчас не&nbsp;пользовались такими сервисами, как Яндекс или Google. Ваши конкуренты уже давно смекнули, что это работает. Если нет&nbsp;&mdash; то&nbsp;у&nbsp;вас есть шанс обогнать их&nbsp;по&nbsp;всем показателям. Так чего&nbsp;же вы&nbsp;ждете?`)
+				+e.rCol.col-lg
+					+b.questionsFlyItems 
+						+e.question--1
+							+icon('question')
+						+e.question--2
+							+icon('question')
+						+e.question--3
+							+icon('question')
+						+e.question--4
+							+icon('question')
+						+e.blue--sm
+							+icon('square')
+						+e.blue--md
+							+icon('square')
+						+e.blue--lg
+							+icon('square')
+						+e.green--sm
+							+icon('square')
+						+e.green--md
+							+icon('square')
+						+e.orange--sm
+							+icon('square')
+						+e.orange--lg
+							+icon('square')
+					+e.question.text-center
+						+e.imgBlock 
+							+pic('question.png','','')(class="sQuestions__mainImg")
+							+pic('questionShadow.png')(class="sQuestions__imgShadow")
+						.h2 Хотите задать другой вопрос?
+						p Мы&nbsp;готовы ответить на&nbsp;него прямо сейчас.
+						+e.btn(href="#") задать вопрос
 	// end sQuestions
+
+mixin questionItem(headerTxt,t)
+	+e.item.q-item-js&attributes(attributes)
+		+e.header!= headerTxt 
+		+e.content.q-content-js!= t

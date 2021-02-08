@@ -5,8 +5,12 @@
 	// --sTPB: ;
 
 	&__slider {
-		margin-top: -293px;
+		margin-top: -193px;
+		@include media-breakpoint-up(md) {
+			margin-top: -293px;
+		}
 		overflow: visible;
+		z-index: 10;
 	}
 
 	&__slide {
@@ -39,10 +43,12 @@
 	&__btn {
 		display: block;
 		margin-top: auto;
-		padding-bottom: rem(7);
+		padding-bottom: rem(11);
+		padding-top: rem(11px);
 		text-align: center;
-		border-bottom: solid 4px #FFBA72;
-		color: $body-color;
+		position: relative;
+		z-index: 2;
+		color: $body-color !important;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-size: rem(19);
@@ -52,20 +58,34 @@
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+		border-radius: 0px;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 4px;
+			background-color: #FFBA72;
+			@include mt;
+		}
 
 		.icon {
 			margin-left: rem(8);
 			fill: none;
 			stroke: currentColor;
 			// font-size: rem(6);
-			@include mt;
 		}
 
 		&:hover {
-			.icon {
-				margin-left: rem(15);
-				transform: rotate(360deg);
+			border-radius: 4px;
+			&::before {
+				height: 100%;
 			}
+
 		}
 	}
 
@@ -100,7 +120,7 @@
 	ul {
 		list-style: none;
 		padding-left: rem(10);
-		padding-bottom: rem(17);
+		padding-bottom: rem(6);
 
 		li {
 			font-size: $h6-font-size;

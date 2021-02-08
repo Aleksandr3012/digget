@@ -57,6 +57,10 @@
 		border-radius: 8px;
 		padding: rem(32) rem(32) rem(20);
 		position: relative;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(8);
+		}
 	}
 
 	&__col {
@@ -82,7 +86,9 @@
 			.sHowWeWork__item {
 				padding-right: rem(40);
 				&:first-child {
-					margin-bottom: rem(28);
+					@include media-breakpoint-up(lg) {
+						margin-bottom: rem(28);
+					}
 				}
 			}
 		}

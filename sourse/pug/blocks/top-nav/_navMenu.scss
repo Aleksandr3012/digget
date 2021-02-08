@@ -26,15 +26,39 @@
 	}
 
 	&__link{
-		color: $body-color;
+		color: $body-color !important;
 		font-weight: 500;
-
 		text-decoration: none;
 		display: block;
 		text-align: center;
+		padding-top: rem(16);
+		padding-bottom: rem(16);
 		@include media-breakpoint-up(md) {
 			text-transform: uppercase;
 		}
 		font-size: rem(24px);
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			@include a-cent1(x);
+			bottom: rem(25);
+			background: #FFBA72;
+			border-radius: 14px;
+			height: 1px;
+			opacity: 0;
+			width: 100%;
+			@include mt(.5);
+		}
+
+		&:hover {
+
+			&::before {
+				opacity: 1;
+				bottom: 0;
+				width: 79px;
+			}
+		}
 	}
 }

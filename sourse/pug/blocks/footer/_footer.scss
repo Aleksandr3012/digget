@@ -1,43 +1,54 @@
 .footer {
-		
+	background: #2C2F34;
+	padding-top: rem(45);
+	color: rgba(240, 240, 241, 0.34);
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: auto;
 
-// 
-@include media-breakpoint-up(xl) {}
+	&__foot {
+		position: relative;
+		padding-top: 33px;
+		padding-bottom: 33px;
+		background: rgba(44, 47, 52, 0.98);
+	}
 
-@include media-breakpoint-up(lg) {}
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		margin-bottom: rem(24);
+	}
 
-@include media-breakpoint-up(md) {}
+	&__whrite {
+		margin-bottom: 24px;
+		@extend .mono2;
+	}
 
-@include media-breakpoint-up(sm) {}
+	&__mail {
+		@extend .text-gradient;
+		font-size: $h4-font-size;
+
+		&:hover {
+			background: linear-gradient(153.94deg, #FFBA72 22.43%, #FFBA72 83.58%),linear-gradient(0deg, #FFBA72, #FFBA72);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: #FFBA72;
+		@extend .h4;
+	}
+
+
+
+
 
 @include media-breakpoint-up(xs) {}
-
-
-// 
 @include media-breakpoint-between(md, xl) {}
-
-
-// 
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
 @include media-breakpoint-only(xl) {}
-
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
 @include media-breakpoint-down(xs) {}
 }

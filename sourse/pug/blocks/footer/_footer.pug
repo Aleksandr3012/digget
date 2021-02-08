@@ -1,2 +1,38 @@
 mixin footer()
-	footer.footer
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			.row.justify-content-between
+				.col-lg-auto
+					+e.logo(href="/")
+						+pic('logo-white.png','','')
+					+e.location г. Белгород, ул. Гражданский проспект 29а
+					+e.tel(href="tel:+79440000000") +7 (944) 000-00-00
+				.col-auto 
+					.row 
+						.col-md-6 
+							+e.title УСЛУГИ
+							ul 
+								li Создание сайта
+								li Дизайн и контент
+								li Продвижение
+								li Поддержка
+						.col-md-6 
+							+e.title О нас
+							ul 
+								li Компания
+								li Вакансии
+								li Награды
+				.col-auto.text-center
+					+e.btn(href="#") заполнить бриф
+					+e.whrite или напишите нам
+					+e.mail(href="mailto:BOX@DIGGET.ORG") BOX@DIGGET.ORG
+				.col-auto
+					+e.title МЫ В СОЦСЕТЯХ
+					+soc()
+		+e.foot 
+			.container 
+				.row.justify-content-between
+					.col-auto 
+						+e.dev © 2012 – 2021, DIGGET Диджитал студия для Вашего бизнеса
+					.col-auto 
+						+e.polite(href="#") Политика обработки персональных данных

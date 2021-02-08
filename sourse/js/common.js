@@ -300,6 +300,7 @@ function eventHandler() {
 		// autoHeight: true,
 		freeMode: true,
 		freeModeMomentum: true,
+		spaceBetween: 16,
 		breakpoints: {
 			1200: {
 				slidesPerView: 3,
@@ -321,7 +322,7 @@ function eventHandler() {
 		},
 	});
 
-	let articalsSlider = new Swiper('.sBrif__slider--js', {
+	let brifSlider = new Swiper('.sBrif__slider--js', {
 		freeModeMomentum: true,
 		watchOverflow: true,
 		slidesPerView: 'auto',
@@ -340,6 +341,27 @@ function eventHandler() {
 		},
 	});
 	// modal window
+
+	let qItem = document.querySelectorAll(".q-item-js");
+	qItem.forEach(function (el) {
+		el.addEventListener('click', function () {
+			let allItems = document.querySelectorAll('.q-item-js');
+			let self = this;
+
+			for (let item of allItems) {
+				let currContent = item.querySelector('.q-content-js');
+
+				if (item === self) {
+					item.classList.toggle('active');
+					currContent.classList.toggle('active');
+				}
+				else {
+					item.classList.remove('active');
+					currContent.classList.remove('active');
+				}
+			}
+		})
+	})
 
 };
 if (document.readyState !== 'loading') {

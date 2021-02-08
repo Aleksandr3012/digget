@@ -7,6 +7,8 @@ include ../blocks/sBrif/_sBrif.pug
 include ../blocks/sHowWeWork/_sHowWeWork.pug
 include ../blocks/sOurTeam/_sOurTeam.pug
 include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sProblem/_sProblem.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
 
 block variables
 	- let  mainPage= null
@@ -22,8 +24,8 @@ block pagecontent
 	+sHowWeWork
 	+sOurTeam
 	+sQuestions
-	+sForm()
-	+sContact()
+	+sProblem(class="d-none d-md-block")
+	+sAdvantages
 	+footer()
 
 

@@ -295,25 +295,23 @@ function eventHandler() {
 	const teamSlider = new Swiper('.sOurTeam__slider--js', {
 		...defaultSl,
 		slidesPerView: 'auto',
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		// autoHeight: true,
 		freeMode: true,
 		freeModeMomentum: true,
 		spaceBetween: 16,
 		breakpoints: {
-			1200: {
+			1400: {
 				slidesPerView: 3,
 				spaceBetween: 71,
 			},
-			992: {
-				slidesPerView: 3,
+			576 : {
+				slidesPerView: 'auto',
 				spaceBetween: 40,
 			},
-			768 : {
-				slidesPerView: 2,
-				spaceBetween: 16,
-			},
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3,
 		},
 
 		navigation: {
@@ -342,7 +340,7 @@ function eventHandler() {
 	});
 	// modal window
 
-	let qItem = document.querySelectorAll(".q-item-js");
+	let qItem = document.querySelectorAll(".sQuestions .q-item-js");
 	qItem.forEach(function (el) {
 		el.addEventListener('click', function () {
 			let allItems = document.querySelectorAll('.q-item-js');
@@ -361,6 +359,11 @@ function eventHandler() {
 				}
 			}
 		})
+	})
+
+	$('.drop-accardion-js').on('click', function(){
+		$(this).parent().toggleClass('active');
+		$(this).parent().find('.drop-accardion-toggle-js').toggle();
 	})
 
 };

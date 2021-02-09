@@ -21,7 +21,13 @@
 		}
 		border: solid 1px #F0F0F1;
 		border-radius: 8px;
-		padding: rem(30) rem(23) rem(32);
+		padding: rem(30) rem(10) rem(32);
+		@include media-breakpoint-up(xxl) {
+			padding: rem(30) rem(15) rem(32);
+		}
+		@include media-breakpoint-up(xxxl) {
+			padding: rem(30) rem(23) rem(32);
+		}
 		display: flex;
 		flex-direction: column;
 		height: auto;
@@ -31,8 +37,11 @@
 			}
 		};
 		width: 260px;
-		@include media-breakpoint-up(lg) {
-			width: calc(var(--containerW) / 5.39);
+		@include media-breakpoint-up(xxl) {
+			width: calc(var(--containerW) / 5.5);
+		}
+		@include media-breakpoint-up(xxxl) {
+			width: calc(var(--containerW) / 5.42);
 		}
 
 		&:last-child {
@@ -60,6 +69,7 @@
 		margin-right: auto;
 		border-radius: 0px;
 		overflow: hidden;
+		letter-spacing: rem(-0.6);
 
 		&::before {
 			content: '';
@@ -74,7 +84,7 @@
 		}
 
 		.icon {
-			margin-left: rem(8);
+			margin-left: rem(5);
 			fill: none;
 			stroke: currentColor;
 			// font-size: rem(6);
@@ -91,7 +101,10 @@
 
 	&__title {
 		text-transform: uppercase;
-		font-size: rem(22px);
+		font-size: rem(20px);
+		@include media-breakpoint-up(xxxl) {
+			font-size: rem(22px);
+		}
 		position: relative;
 		text-align: center;
 		padding-bottom: rem(23);
@@ -124,7 +137,10 @@
 
 		li {
 			font-size: $h6-font-size;
-			padding-left: rem(21);
+			padding-left: rem(10);
+			@include media-breakpoint-up(xxl) {
+				padding-left: rem(21);
+			}
 			position: relative;
 			line-height: calc(23/18);
 			padding-bottom: rem(7);

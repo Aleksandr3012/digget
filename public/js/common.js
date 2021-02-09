@@ -302,25 +302,22 @@ function eventHandler() {
 	}), _defaultSl);
 	var teamSlider = new Swiper('.sOurTeam__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		// autoHeight: true,
 		freeMode: true,
 		freeModeMomentum: true,
 		spaceBetween: 16,
 		breakpoints: {
-			1200: {
+			1400: {
 				slidesPerView: 3,
 				spaceBetween: 71
 			},
-			992: {
-				slidesPerView: 3,
+			576: {
+				slidesPerView: 'auto',
 				spaceBetween: 40
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 16
 			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
 		},
 		navigation: {
 			nextEl: '.sOurTeam .swiper-button-next',
@@ -344,7 +341,7 @@ function eventHandler() {
 		}
 	}); // modal window
 
-	var qItem = document.querySelectorAll(".q-item-js");
+	var qItem = document.querySelectorAll(".sQuestions .q-item-js");
 	qItem.forEach(function (el) {
 		el.addEventListener('click', function () {
 			var allItems = document.querySelectorAll('.q-item-js');
@@ -372,6 +369,10 @@ function eventHandler() {
 				_iterator.f();
 			}
 		});
+	});
+	$('.drop-accardion-js').on('click', function () {
+		$(this).parent().toggleClass('active');
+		$(this).parent().find('.drop-accardion-toggle-js').toggle();
 	});
 }
 

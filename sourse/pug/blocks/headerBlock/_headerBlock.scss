@@ -1,8 +1,14 @@
 // start .headerBlock
 .headerBlock {
 	--sPT: #{rem(25)};
-	--sPB: #{rem(300)};
+	--sPB: #{rem(240)};
+	@include media-breakpoint-up(sm) {
+		--sPB: #{rem(270)};
+	}
 	@include media-breakpoint-up(md) {
+		--sPB: #{rem(350)};
+	}
+	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(119)};
 		--sPB: #{rem(400)};
 	}
@@ -100,7 +106,10 @@
 		}
 
 		&--sm {
-			top: rem(-47px);
+			top: rem(-17px);
+			@include media-breakpoint-up(lg) {
+				top: rem(-47px);
+			}
 			left: rem(520px);
 
 			.icon {
@@ -121,6 +130,9 @@
 
 	&__green {
 		position: absolute;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 		
 		.icon {
 			color: #4FB058;

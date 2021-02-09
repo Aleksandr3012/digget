@@ -1,0 +1,30 @@
+// start .sQuiz
+.sQuiz {
+	--sPT: ;
+	--sPB: ;
+	--sTPB: ;
+	
+	&__inner {
+		max-width: 948px;
+	}
+
+	.section-title {
+		.row {
+			@include media-breakpoint-up(xl) {
+				@include roww(72px);
+			}
+		}
+	}
+
+	blockquote {
+		padding: rem(24);
+		background: #FFF6EC;
+		border-radius: 8px;
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sQuiz

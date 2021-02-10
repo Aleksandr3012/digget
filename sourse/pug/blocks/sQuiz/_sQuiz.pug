@@ -19,7 +19,7 @@ mixin sQuiz(data)
 					input(class='utm_medium' name='utm_medium' type="hidden")
 					input(class='utm_campaign' name='utm_campaign' type="hidden")
 					+e.block 
-						+e.title Тип продукта
+						h6 Тип продукта
 						.row 
 							.col-sm-6.col-lg-4 
 								+in-c('radio','Продвижение сайта ','type')
@@ -34,7 +34,7 @@ mixin sQuiz(data)
 							.col-sm-6.col-lg-4 
 								+in-c('radio','Другое','type')
 					+e.block 
-						+e.title Тип продукта
+						h6 Тип продукта
 						.row 
 							.col-sm-6.col-lg-4 
 								+in-c('radio','Менее 50 000 ₽ ','budget')
@@ -49,11 +49,11 @@ mixin sQuiz(data)
 							.col-sm-6.col-lg-4 
 								+in-c('radio','Не знаю','budget')
 					+e.block--border 
-						+e.title Задача
+						h6 Задача
 						+input('Расскажите про свою задачу','textarea')
 						+add-file
 					+e.block 
-						+e.title Ваши контакты
+						h6 Ваши контакты
 						.row
 							.col-sm-6.col-lg-4 
 								+input('Ваше имя?','text')

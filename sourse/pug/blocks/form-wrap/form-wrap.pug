@@ -70,10 +70,10 @@ mixin add-file(n)
 			+e.SPAN.text Прикрепить файл
 		+e.SPAN.filename 
 
-mixin radio(t)
+mixin radio(t,n)
 	+b.LABEL.custom-radio
 		input(type="radio" name= n)&attributes(attributes)
-		+e.SPAN.textWrap
+		+e.SPAN.text
 			+e.SPAN.radioTitle= t
 
 

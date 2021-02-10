@@ -22,32 +22,32 @@ mixin sQuiz(data)
 						h6 Тип продукта
 						.row 
 							.col-sm-6.col-lg-4 
-								+in-c('radio','Продвижение сайта ','type')
+								+radio('Продвижение сайта ','type')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','Создание сайта','type')
+								+radio('Создание сайта','type')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','SMM','type')
+								+radio('SMM','type')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','Разработка контента','type')
+								+radio('Разработка контента','type')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','Брендирование','type')
+								+radio('Брендирование','type')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','Другое','type')
+								+radio('Другое','type')
 					+e.block 
 						h6 Тип продукта
 						.row 
 							.col-sm-6.col-lg-4 
-								+in-c('radio','Менее 50 000 ₽ ','budget')
+								+radio('Менее 50 000 ₽ ','budget')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','100-150 тыс. ₽','budget')
+								+radio('100-150 тыс. ₽','budget')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','150-300 тыс. ₽','budget')
+								+radio('150-300 тыс. ₽','budget')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','500 тыс. - 1млн. ₽','budget')
+								+radio('500 тыс. - 1млн. ₽','budget')
 							.col-sm-6.col-lg-4 
-								+in-c('radio',' Более 1млн. ₽','budget')
+								+radio(' Более 1млн. ₽','budget')
 							.col-sm-6.col-lg-4 
-								+in-c('radio','Не знаю','budget')
+								+radio('Не знаю','budget')
 					+e.block--border 
 						h6 Задача
 						+input('Расскажите про свою задачу','textarea')

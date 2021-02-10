@@ -258,3 +258,36 @@ input::-webkit-inner-spin-button {
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background-color: $success;
 }
+
+.custom-radio {
+	margin-bottom: 1rem;
+	display: block;
+	&__text{
+		display: block;
+			border-radius: 8px;
+			border: 1px solid #F0F0F1;
+			@include media-breakpoint-up(sm) {
+
+				padding: rem(12) rem(16);
+			}
+			padding: rem(5);
+			width: 100%;
+			cursor: pointer;
+			text-align: center;
+			@include mt;
+			&:hover{
+				border-color: #FFBA72;
+
+			}
+	}
+	input{
+		@extend .invisible;
+	}
+ 
+	input:checked ~ &__text {
+		background: #FFF6EC;
+		border-color: #FFBA72;
+		color: #FFBA72;
+	}
+
+}

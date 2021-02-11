@@ -38,15 +38,50 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/nav";
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
-// @import "./node_modules/bootstrap/scss/breadcrumb";
-// .breadcrumb {
-// 	.active {
-// 		a {
-// 			// color: $breadcrumb-active-color;
-// 			pointer-events: none;
-// 		}
-// 	}
-// }
+@import "./node_modules/bootstrap/scss/breadcrumb";
+.breadcrumb {
+  background-color: transparent;
+  @include roww(16px);
+  @extend .row;
+  margin-bottom: rem(5);
+
+  &-item {
+    @extend .col-auto;
+    margin-bottom: rem(16);
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    border: solid 1px transparent;
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+    padding: rem(8) rem(16);
+    color: $body-color !important;
+    @extend .mono2;
+
+    &:hover {
+      border-color: var(--brBG);
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--brBG);
+      border-radius: 8px;
+      opacity: .1;
+    }
+
+  }
+
+}
 // @import "./node_modules/bootstrap/scss/pagination";
 
 // .pagination-wrapper ul {

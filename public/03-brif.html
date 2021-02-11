@@ -110,11 +110,11 @@
 					<div class="sQuiz__inner">
 						<div class="section-title">
 							<div class="row"> 
-								<div class="col-lg-auto">
+								<div class="col-md-auto">
 									<h1>Заполните бриф</h1>
 									<p>Оставьте заявку, либо свяжитесь с&nbsp;нами.</p>
 								</div>
-								<div class="col-lg">
+								<div class="col-md">
 									<blockquote><span class="text-primary">Бриф</span> &mdash; это опрос, который предоставляет исходные данные, на&nbsp;основании которых мы&nbsp;можем примерно понять, что нужно конкретно вам. Это можно сравнить с&nbsp;техническим заданием, но&nbsp;в&nbsp;более сжатом виде.</blockquote>
 								</div>
 							</div>
@@ -162,7 +162,7 @@
 								</div>
 							</div>
 							<div class="sQuiz__block"> 
-								<h6>Тип продукта</h6>
+								<h6>Бюджет</h6>
 								<div class="row"> 
 									<div class="col-sm-6 col-lg-4"> 
 										<label class="custom-radio">
@@ -201,9 +201,13 @@
 								<div class="sQuiz__input-wrap form-group"><textarea class="sQuiz__input form-control" name="textarea" placeholder="Расскажите про свою задачу"></textarea>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="add-file">
-									<label><input class="add-file__input" name="file" type="file"/><span class="add-file__btn"> </span><span class="add-file__text">Прикрепить файл</span>
-									</label><span class="add-file__filename"> </span>
+								<div class="row"> 
+									<div class="col-sm-6 col-lg-4"> 
+										<div class="add-file">
+											<label><input class="add-file__input" name="file" type="file"/><span class="add-file__btn">Прикрепить файл</span>
+											</label><span class="add-file__filename"> </span>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="sQuiz__block"> 
@@ -219,21 +223,21 @@
 										</div>
 										<!-- +e.input-wrap-->
 									</div>
-									<div class="col-sm-6 col-lg-4"> </div>
+									<div class="col-lg-4"> </div>
 									<div class="col-sm-6 col-lg-4"> 
 										<div class="sQuiz__input-wrap form-group"><input class="sQuiz__input form-control" name="text" type="text" placeholder="Название компании"/>
 										</div>
 										<!-- +e.input-wrap-->
 									</div>
 									<div class="col-sm-6 col-lg-4"> 
-										<div class="sQuiz__input-wrap form-group"><input class="sQuiz__input form-control" name="tel" type="tel" placeholder="Название компании"/>
+										<div class="sQuiz__input-wrap form-group"><input class="sQuiz__input form-control" name="tel" type="tel" placeholder="Телефон"/>
 										</div>
 										<!-- +e.input-wrap-->
 									</div>
 								</div>
 								<button class="sQuiz__btn" type="submit">отправить заявку
 								</button>
-								<div class="sQuiz__polite"><small class="sQuiz__text text-secondary">Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, вы&nbsp;даёте согласие на&nbsp;обработку своих персональных данных</small>
+								<div class="sQuiz__polite">Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, вы даёте согласие на&nbsp;обработку своих персональных данных
 								</div>
 							</div>
 						</form>
@@ -341,7 +345,7 @@
 					<!-- +e.input-wrap-->
 					<button class="form-wrap__btn btn" type="submit"> 
 					</button>
-					<div class="form-wrap__polite"><small class="form-wrap__text text-secondary">Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, вы&nbsp;даёте согласие на&nbsp;обработку своих персональных данных</small>
+					<div class="form-wrap__polite">Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, вы даёте согласие на&nbsp;обработку своих персональных данных
 					</div>
 				</form>
 			</div>
@@ -356,7 +360,6 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"> </script>
 		<!-- /slider libs-->
-		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

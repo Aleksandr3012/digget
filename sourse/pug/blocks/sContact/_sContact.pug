@@ -3,7 +3,39 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sContact
+				h1 Контакты в Белгороде
 				
 			.row
+				.col-lg-5 
+					+e.lightBlock
+						+e.tel(href="+7(900)1541314") +7 (900) 154-13-14
+				.col-lg
+					h4 Наш офис находится в&nbsp;Белгороде,<br> но&nbsp;мы&nbsp;сделали все возможное для того, чтобы&nbsp;Вы могли работать с&nbsp;нами из&nbsp;любой точки России.
+				.col-lg-5 
+					+e.lightBlock
+						+e.block
+							h4 Адрес
+							h6 г. Белгород, ул. Гражданский проспект 29а
+						+e.block 
+							h6 Электронная почта
+							+e.mail(href="mailto:box@digget.org") box@digget.org
+						+e.block 
+							h6 Часы работы
+							h4 с 10:00 до 18:00<br>с понедельника по пятницу
+				.col-lg 
+					.row 
+						.col-md-6 
+							+e.socItem(href="#")
+								+icon('instagram')
+								+e.socTxt Мы в #[span Instagram]
+						.col-md-6 
+							+e.socItem(href="#")
+								+icon('vk')
+								+e.socTxt Мы в #[span ВКонтакте]
+						.col-md-6 
+							+e.socItem(href="#")
+								+icon('fb')
+								+e.socTxt Мы в #[span Facebook]
+
+
 	// end sContact

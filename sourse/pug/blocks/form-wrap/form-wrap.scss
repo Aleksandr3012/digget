@@ -1,8 +1,4 @@
 .form-wrap{
- 	&__input-wrap{
-			// @extend .form-group;
-			
-		}
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
@@ -70,15 +66,6 @@
 @include media-breakpoint-down(xs) {}
 
 
-.form-check{
-
-}
-.form-check-input{
-
-}
-.form-check-label{
-	
-}
 
 // .custom-input{
 // 	display: block;
@@ -260,25 +247,30 @@ input::-webkit-inner-spin-button {
 }
 
 .custom-radio {
-	margin-bottom: 1rem;
+	margin-bottom: rem(15);
+	@include media-breakpoint-up(sm) {
+		margin-bottom: rem(24);
+	}
 	display: block;
 	&__text{
+		@extend .mono2;
+		line-height: calc(19/15);
 		display: block;
-			border-radius: 8px;
-			border: 1px solid #F0F0F1;
-			@include media-breakpoint-up(sm) {
+		border-radius: 8px;
+		border: 1px solid #F0F0F1;
+		@include media-breakpoint-up(sm) {
+			padding: rem(20) rem(5);
 
-				padding: rem(12) rem(16);
-			}
-			padding: rem(5);
-			width: 100%;
-			cursor: pointer;
-			text-align: center;
-			@include mt;
-			&:hover{
-				border-color: #FFBA72;
+		}
+		padding: rem(12) rem(16);
+		width: 100%;
+		cursor: pointer;
+		text-align: center;
+		@include mt;
+		&:hover{
+			border-color: #FFBA72;
 
-			}
+		}
 	}
 	input{
 		@extend .invisible;
@@ -289,5 +281,4 @@ input::-webkit-inner-spin-button {
 		border-color: #FFBA72;
 		color: #FFBA72;
 	}
-
 }

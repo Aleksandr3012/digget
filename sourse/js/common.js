@@ -138,14 +138,14 @@ const JSCCommon = {
 	},
 	// /tabs
 
-	inputMask() {
-		// mask for input
-		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(function (element) {
-			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}")
-		});
-		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
+	// inputMask() {
+	// 	// mask for input
+	// 	let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+	// 	InputTel.forEach(function (element) {
+	// 		element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}")
+	// 	});
+	// 	Inputmask("+9(999)999-99-99").mask(InputTel);
+	// },
 	// /inputMask
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
@@ -225,7 +225,17 @@ const JSCCommon = {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
-	}
+	},
+
+	CustomInputFile: function CustomInputFile() {
+		var file = $(".add-file input[type=file]");
+		file.change(function () {
+			var filename = $(this).val().replace(/.*\\/, "");
+			var name = $(".add-file__filename  ");
+			name.text(filename);
+
+		});
+	},
 };
 const $ = jQuery;
 
@@ -234,7 +244,8 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
+	// JSCCommon.inputMask();
+	JSCCommon.CustomInputFile();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
@@ -242,7 +253,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '07.jpg';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}

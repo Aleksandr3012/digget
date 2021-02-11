@@ -18,6 +18,10 @@
 	margin-left: auto;
 	margin-right: auto;
 
+	&-mb {
+		margin-bottom: rem(54);
+	}
+
 	&__col {
 		max-width: 250px;
 		@include media-breakpoint-up(lg) {

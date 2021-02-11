@@ -66,8 +66,8 @@ mixin add-file(n)
 	+b.add-file
 		label
 			+e.INPUT.input(name='file', type='file')
-			+e.SPAN.btn 
-			+e.SPAN.text Прикрепить файл
+			+e.SPAN.btn Прикрепить файл
+			//- +e.SPAN.text 
 		+e.SPAN.filename 
 
 mixin radio(t,n)
@@ -78,5 +78,4 @@ mixin radio(t,n)
 
 
 mixin polite()
-	+e.polite
-		+e.SMALL.text.text-secondary Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, вы&nbsp;даёте согласие на&nbsp;обработку своих персональных данных
+	+e.polite Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, вы даёте согласие на&nbsp;обработку своих персональных данных

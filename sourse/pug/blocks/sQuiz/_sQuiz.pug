@@ -5,10 +5,10 @@ mixin sQuiz(data)
 			+e.inner
 				+b.section-title
 					.row 
-						.col-lg-auto
+						.col-md-auto
 							h1 Заполните бриф
 							p Оставьте заявку, либо свяжитесь с&nbsp;нами.
-						.col-lg
+						.col-md
 							blockquote #[span.text-primary Бриф] &mdash; это опрос, который предоставляет исходные данные, на&nbsp;основании которых мы&nbsp;можем примерно понять, что нужно конкретно вам. Это можно сравнить с&nbsp;техническим заданием, но&nbsp;в&nbsp;более сжатом виде.
 						
 				form
@@ -34,7 +34,7 @@ mixin sQuiz(data)
 							.col-sm-6.col-lg-4 
 								+radio('Другое','type')
 					+e.block 
-						h6 Тип продукта
+						h6 Бюджет
 						.row 
 							.col-sm-6.col-lg-4 
 								+radio('Менее 50 000 ₽ ','budget')
@@ -51,7 +51,9 @@ mixin sQuiz(data)
 					+e.block--border 
 						h6 Задача
 						+input('Расскажите про свою задачу','textarea')
-						+add-file
+						.row 
+							.col-sm-6.col-lg-4 
+								+add-file
 					+e.block 
 						h6 Ваши контакты
 						.row
@@ -59,11 +61,11 @@ mixin sQuiz(data)
 								+input('Ваше имя?','text')
 							.col-sm-6.col-lg-4 
 								+input('E-mail','email')
-							.col-sm-6.col-lg-4 
+							.col-lg-4 
 							.col-sm-6.col-lg-4 
 								+input('Название компании','text')
 							.col-sm-6.col-lg-4 
-								+input('Название компании','tel')
+								+input('Телефон','tel')
 						+e.btn(type="submit") отправить заявку
 						+polite
 	// end sQuiz

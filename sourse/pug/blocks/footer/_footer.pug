@@ -26,7 +26,7 @@ mixin footer()
 					.col-sm-6.col-md-4.col-lg-4.col-xl.text-center
 						+e.btn(href="#") заполнить бриф
 						+e.whrite или напишите нам
-						+e.mail(href="mailto:BOX@DIGGET.ORG") BOX@DIGGET.ORG
+						+e.mail(href="mailto:BOX@DIGGET.ORG" target="_blank") BOX@DIGGET.ORG
 					.col-md-6.col-xl-3
 						+e.title МЫ В СОЦСЕТЯХ
 						+soc()
@@ -34,6 +34,6 @@ mixin footer()
 			.container 
 				.row.justify-content-between
 					.col-lg-auto 
-						+e.dev © 2012 – 2021, DIGGET Диджитал студия для Вашего бизнеса
+						+e.dev © 2012 – #[span.currentYear ], DIGGET Диджитал студия для Вашего бизнеса
 					.col-lg-auto 
-						+e.polite(href="#") Политика обработки персональных данных
+						+e.polite(href="#" target="_blank") Политика обработки персональных данных

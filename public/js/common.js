@@ -264,11 +264,12 @@ function eventHandler() {
 	JSCCommon.CustomInputFile();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.animateScroll();
+	JSCCommon.getCurrentYear('.currentYear'); // JSCCommon.CustomInputFile(); 
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '07.jpg';
+	screenName = '06.jpg';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));

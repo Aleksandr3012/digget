@@ -42,10 +42,6 @@
 		position: relative;
 		z-index: 5;
 	}
-	
-	.container {
-		position: relative;
-	}
 
 	.row {
 		@include roww(25px);
@@ -206,9 +202,22 @@
 			display: none;
 		}
 	}
+
+	.container {
+		position: relative;
+	}
 } // end.sHowWeWork
 
 .howWeWorkSquares {
+	position: absolute !important;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	bottom: 100%;
+	z-index: 1;
+	@include media-breakpoint-up(md) {
+		bottom: 0;
+	}
 
 	&__green, &__orange, &__blue {
 		position: absolute;
@@ -220,8 +229,8 @@
 		}
 
 		&--1 {
-			top: 80px;
-			left: 55px;
+			top: 80px !important;
+			left: 55px !important;
 
 			.icon {
 				font-size: rem(20);
@@ -230,13 +239,14 @@
 
 		&--2 {
 			z-index: 2;
-			top: 100px;
+			top: 100px !important;
 			@include media-breakpoint-down(md) {
-				left: -30px;
-				top: 200px;
+				left: -30px !important;
+				top: 200px !important;
 			}
 			@include media-breakpoint-up(md) {
-				right: 380px;
+				right: 380px !important;
+				left: auto !important;
 			}
 
 			.icon {
@@ -246,8 +256,9 @@
 
 		&--3 {
 			z-index: 2;
-			top: 115px;
-			right: 625px;
+			top: 115px !important;
+			right: 625px !important;
+			left: auto !important;
 
 			.icon {
 				font-size: rem(15);
@@ -256,8 +267,9 @@
 		}
 		&--4 {
 			z-index: 2;
-			top: 210px;
-			right: 805px;
+			top: 210px !important;
+			right: 805px !important;
+			left: auto !important;
 
 			.icon {
 				font-size: rem(15);
@@ -273,11 +285,12 @@
 
 		&--1 {
 			z-index: 2;
-			top: 140px;
-			right: 20px;
+			top: 140px !important;
+			right: 20px !important;
 			@include media-breakpoint-up(md) {
-				right: 345px;
+				right: 345px !important;
 			}
+			left: auto !important;
 
 			.icon {
 				font-size: rem(20);
@@ -285,8 +298,9 @@
 		}
 		&--2 {
 			z-index: 2;
-			top: 240px;
-			right: 860px;
+			top: 240px !important;
+			right: 860px !important;
+			left: auto !important;
 
 			.icon {
 				font-size: rem(23);
@@ -294,8 +308,8 @@
 			}
 		}
 		&--3 {
-			top: 153px;
-			left: 145px;
+			top: 153px !important;
+			left: 145px !important;
 
 			.icon {
 				font-size: rem(27);
@@ -304,12 +318,13 @@
 		}
 		&--4 {
 			z-index: 2;
-			right: -30px;
-			top: 420px;
+			right: -30px !important;
+			top: 420px !important;
 			@include media-breakpoint-up(md) {
-				right: 480px;
-				top: 350px;
+				right: 480px !important;
+				top: 350px !important;
 			}
+			left: auto !important;
 
 			.icon {
 				transform: rotate(45deg);
@@ -318,8 +333,9 @@
 		}
 		&--5 {
 			z-index: 2;
-			top: 350px;
-			right: 530px;
+			top: 350px !important;
+			right: 530px !important;
+			left: auto !important;
 
 			.icon {
 				font-size: rem(15);
@@ -334,8 +350,9 @@
 
 		&--1 {
 			z-index: 2;
-			right: -10px;
-			top: 340px;
+			right: -10px !important;
+			top: 340px !important;
+			left: auto !important;
 
 			.icon {
 				transform: rotate(42deg);
@@ -343,8 +360,8 @@
 			}
 		}
 		&--2 {
-			left: 220px;
-			top: 100px;
+			left: 220px !important;
+			top: 100px !important;
 
 			.icon {
 				transform: rotate(45deg);
@@ -353,8 +370,9 @@
 		}
 		&--3 {
 			z-index: 2;
-			right: 670px;
-			top: 290px;
+			right: 670px !important;
+			top: 290px !important;
+			left: auto !important;
 
 			.icon {
 				font-size: rem(45);

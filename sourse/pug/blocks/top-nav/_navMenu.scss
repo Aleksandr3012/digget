@@ -51,6 +51,13 @@
 		@include media-breakpoint-up(xl) {
 			margin-left: rem(12);
 		}
+
+		@include media-breakpoint-down(lg) {
+			padding-left: rem(10);
+			height: rem(30);
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	&__link{

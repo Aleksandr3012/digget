@@ -384,6 +384,21 @@ function eventHandler() {
 		$(this).parent().toggleClass('active');
 		$(this).parent().find('.drop-accardion-toggle-js').toggle();
 	});
+	var flyItems = document.querySelectorAll('.fly-items-js');
+
+	var _iterator2 = _createForOfIteratorHelper(flyItems),
+			_step2;
+
+	try {
+		for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+			var item = _step2.value;
+			var parallaxInstance = new Parallax(item);
+		}
+	} catch (err) {
+		_iterator2.e(err);
+	} finally {
+		_iterator2.f();
+	}
 }
 
 ;

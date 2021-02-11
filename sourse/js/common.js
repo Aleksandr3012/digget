@@ -378,6 +378,11 @@ function eventHandler() {
 		$(this).parent().find('.drop-accardion-toggle-js').toggle();
 	})
 
+	let flyItems = document.querySelectorAll('.fly-items-js');
+	for(let item of flyItems){
+		var parallaxInstance = new Parallax(item);
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

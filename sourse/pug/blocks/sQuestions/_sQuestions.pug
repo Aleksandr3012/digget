@@ -12,28 +12,28 @@ mixin sQuestions(data)
 					+questionItem(`Как оценить результат сотрудничества?`,`У&nbsp;каждого проекта свои ключевые показатели эффективности (KPI), которые обговариваются индивидуально с&nbsp;заказчиком.`)
 					+questionItem(`А&nbsp;реклама в&nbsp;интернете вообще работает?`,`Разумеется, иначе мы&nbsp;бы сейчас не&nbsp;пользовались такими сервисами, как Яндекс или Google. Ваши конкуренты уже давно смекнули, что это работает. Если нет&nbsp;&mdash; то&nbsp;у&nbsp;вас есть шанс обогнать их&nbsp;по&nbsp;всем показателям. Так чего&nbsp;же вы&nbsp;ждете?`)
 				+e.rCol.col-lg-6
-					+b.questionsFlyItems 
-						+e.question--1
+					+b.questionsFlyItems.fly-items-js
+						+e.question--1(data-depth="0.1")
 							+icon('question')
-						+e.question--2
+						+e.question--2(data-depth="0.15")
 							+icon('question')
-						+e.question--3
+						+e.question--3(data-depth="0.25")
 							+icon('question')
-						+e.question--4
+						+e.question--4(data-depth="0.3")
 							+icon('question')
-						+e.blue--sm
+						+e.blue--sm(data-depth="0.1")
 							+icon('square')
-						+e.blue--md
+						+e.blue--md(data-depth="0.15")
 							+icon('square')
-						+e.blue--lg
+						+e.blue--lg(data-depth="0.25")
 							+icon('square')
-						+e.green--sm
+						+e.green--sm(data-depth="0.3")
 							+icon('square')
-						+e.green--md
+						+e.green--md(data-depth="0.35")
 							+icon('square')
-						+e.orange--sm
+						+e.orange--sm(data-depth="0.1")
 							+icon('square')
-						+e.orange--lg
+						+e.orange--lg(data-depth="0.15")
 							+icon('square')
 					+e.question.text-center
 						+e.imgBlock 

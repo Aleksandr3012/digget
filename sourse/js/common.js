@@ -352,25 +352,29 @@ function eventHandler() {
 	});
 	// modal window
 
-	let qItem = document.querySelectorAll(".sQuestions .q-item-js");
-	qItem.forEach(function (el) {
-		el.addEventListener('click', function () {
-			let allItems = document.querySelectorAll('.q-item-js');
-			let self = this;
+	// let qItem = document.querySelectorAll(".sQuestions .q-item-js");
+	// qItem.forEach(function (el) {
+	// 	el.addEventListener('click', function () {
+	// 		let allItems = document.querySelectorAll('.q-item-js');
+	// 		let self = this;
 
-			for (let item of allItems) {
-				let currContent = item.querySelector('.q-content-js');
+	// 		for (let item of allItems) {
+	// 			let currContent = item.querySelector('.q-content-js');
 
-				if (item === self) {
-					item.classList.toggle('active');
-					currContent.classList.toggle('active');
-				}
-				else {
-					item.classList.remove('active');
-					currContent.classList.remove('active');
-				}
-			}
-		})
+	// 			if (item === self) {
+	// 				item.classList.toggle('active');
+	// 				currContent.classList.toggle('active');
+	// 			}
+	// 			else {
+	// 				item.classList.remove('active');
+	// 				currContent.classList.remove('active');
+	// 			}
+	// 		}
+	// 	})
+	// })
+
+	$('.sQuestions .q-item-js').on('click', function(){
+		$(this).toggleClass('active').find('.q-content-js').slideToggle().toggleClass('active');
 	})
 
 	$('.drop-accardion-js').on('click', function(){

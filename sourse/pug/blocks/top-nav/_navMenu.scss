@@ -33,8 +33,9 @@
 			&.dropdown {
 				&:hover {
 					.drop {
-						transform: scale3d(1,1,1);
+						// transform: scale3d(1,1,1);
 						opacity: 1;
+						pointer-events:inherit;
 					}
 				}
 
@@ -108,7 +109,7 @@
 	@include media-breakpoint-up(lg) {
 		display: block !important;
 		opacity: 0;
-		transform: scale3d(1,0,0);
+		// transform: scale3d(1,0,0);
 		transform-origin: top;
 		@include mt(.2);
 		position: absolute;
@@ -121,6 +122,7 @@
 		border-radius: 8px;
 		padding: rem(24);
 		width: 305px;
+		pointer-events: none;
 	}
 
 	@include media-breakpoint-down(lg) {

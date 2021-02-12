@@ -22,10 +22,7 @@
 		border: solid 1px #F0F0F1;
 		border-radius: 8px;
 		padding: rem(30) rem(10) rem(32);
-		@include media-breakpoint-up(xxl) {
-			padding: rem(30) rem(15) rem(32);
-		}
-		@include media-breakpoint-up(xxxl) {
+		@include media-breakpoint-up(xl) {
 			padding: rem(30) rem(23) rem(32);
 		}
 		display: flex;
@@ -37,9 +34,6 @@
 			}
 		};
 		width: 260px;
-		@include media-breakpoint-up(xxl) {
-			width: calc(var(--containerW) / 5.5);
-		}
 		@include media-breakpoint-up(xxxl) {
 			width: calc(var(--containerW) / 5.42);
 		}

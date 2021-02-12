@@ -59,11 +59,13 @@
 		&__iconWrap {
 			position: absolute;
 			z-index: -1;
-			top: 50%;
-			right: 70%;
+			top: 93%;
+			right: 90%;
+			
 
 			.icon {
 				color: rgba(255, 186, 114, 1);
+				font-size: rem(200);
 			}
 		}
 	}

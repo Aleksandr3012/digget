@@ -5,7 +5,8 @@ mixin footer()
 				.row
 					.col-md-auto
 						+e.logo(href="/")
-							+pic('logo-white.png','','')
+							img(src="img/svg/logo-white.svg", alt="" loading="lazy")
+							//- +pic('logo-white.png','','')
 						+e.location г. Белгород, ул. Гражданский проспект 29а
 						+e.tel(href="tel:+79440000000") +7 (944) 000-00-00
 					.col-md-6.col-lg.col-xl-3

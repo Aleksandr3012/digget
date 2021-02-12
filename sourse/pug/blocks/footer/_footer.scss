@@ -38,16 +38,37 @@
 	}
 
 	&__mail {
+		text-decoration: none !important;
 		display: inline-block;
 		@extend .text-gradient;
 		font-size: $h4-font-size;
+		@include mt(.6);
 		margin-bottom: rem(30);
+		position: relative;
+
+		&::before {
+			content: '';
+			@include mt;
+			position: absolute;
+			bottom: -5px;
+			width: 100%;
+			left: 0;
+			background: #303338;
+			border-radius: 4px;
+			height: 2px;
+			opacity: 0;
+		}
 
 		&:hover {
-			background: linear-gradient(153.94deg, #FFBA72 22.43%, #FFBA72 83.58%),linear-gradient(0deg, #FFBA72, #FFBA72);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+			// background: linear-gradient(153.94deg, #FFBA72 22.43%, #FFBA72 83.58%),linear-gradient(0deg, #FFBA72, #FFBA72);
+			// -webkit-background-clip: text;
+			// -webkit-text-fill-color: transparent;
+			background-position: 100%;
+			background-size: 300% 200%;
 
+			&::before {
+				opacity: 1;
+			}
 		}
 	}
 

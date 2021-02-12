@@ -482,6 +482,11 @@ iframe {
 	text-transform: uppercase;
 	@include mt;
 	@extend .mono2;
+	box-shadow: none !important;
+
+	&:focus, &:active {
+		background: linear-gradient(116.18deg, rgba(253, 141, 255, 0.4) 24.5%, rgba(253, 130, 11, 0.4) 74.69%), #FD820B;
+	}
 
 	&:hover {
 		background: linear-gradient(116.18deg, rgba(253, 141, 255, 0.4) 24.5%, rgba(253, 130, 11, 0.4) 74.69%), #FF9F42;
@@ -490,6 +495,7 @@ iframe {
 
 .text-gradient {
 	background: linear-gradient(153.94deg, #D17080 22.43%, rgba(255, 255, 255, 0) 83.58%),linear-gradient(0deg, #FFBA72, #FFBA72);
+	background-size: 100% 100%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 

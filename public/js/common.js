@@ -350,35 +350,27 @@ function eventHandler() {
 			loadPrevNextAmount: 8
 		}
 	}); // modal window
+	// let qItem = document.querySelectorAll(".sQuestions .q-item-js");
+	// qItem.forEach(function (el) {
+	// 	el.addEventListener('click', function () {
+	// 		let allItems = document.querySelectorAll('.q-item-js');
+	// 		let self = this;
+	// 		for (let item of allItems) {
+	// 			let currContent = item.querySelector('.q-content-js');
+	// 			if (item === self) {
+	// 				item.classList.toggle('active');
+	// 				currContent.classList.toggle('active');
+	// 			}
+	// 			else {
+	// 				item.classList.remove('active');
+	// 				currContent.classList.remove('active');
+	// 			}
+	// 		}
+	// 	})
+	// })
 
-	var qItem = document.querySelectorAll(".sQuestions .q-item-js");
-	qItem.forEach(function (el) {
-		el.addEventListener('click', function () {
-			var allItems = document.querySelectorAll('.q-item-js');
-			var self = this;
-
-			var _iterator = _createForOfIteratorHelper(allItems),
-					_step;
-
-			try {
-				for (_iterator.s(); !(_step = _iterator.n()).done;) {
-					var item = _step.value;
-					var currContent = item.querySelector('.q-content-js');
-
-					if (item === self) {
-						item.classList.toggle('active');
-						currContent.classList.toggle('active');
-					} else {
-						item.classList.remove('active');
-						currContent.classList.remove('active');
-					}
-				}
-			} catch (err) {
-				_iterator.e(err);
-			} finally {
-				_iterator.f();
-			}
-		});
+	$('.sQuestions .q-item-js').on('click', function () {
+		$(this).toggleClass('active').find('.q-content-js').slideToggle().toggleClass('active');
 	});
 	$('.drop-accardion-js').on('click', function () {
 		$(this).parent().toggleClass('active');
@@ -386,18 +378,18 @@ function eventHandler() {
 	});
 	var flyItems = document.querySelectorAll('.fly-items-js');
 
-	var _iterator2 = _createForOfIteratorHelper(flyItems),
-			_step2;
+	var _iterator = _createForOfIteratorHelper(flyItems),
+			_step;
 
 	try {
-		for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-			var item = _step2.value;
+		for (_iterator.s(); !(_step = _iterator.n()).done;) {
+			var item = _step.value;
 			var parallaxInstance = new Parallax(item);
 		}
 	} catch (err) {
-		_iterator2.e(err);
+		_iterator.e(err);
 	} finally {
-		_iterator2.f();
+		_iterator.f();
 	}
 }
 

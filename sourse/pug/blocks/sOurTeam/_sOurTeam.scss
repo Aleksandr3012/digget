@@ -36,8 +36,8 @@
 	&__col {
 		position: relative;
 		z-index: 5;
-		padding-right: rem(25) !important;
 		padding-bottom: rem(5);
+		padding-right: rem(15) !important;
 		@include media-breakpoint-up(md) {
 			padding-bottom: rem(16);
 		}
@@ -47,24 +47,28 @@
 	}
 
 	&__imgCol {
-		max-width: 30%;
+		max-width: 36%;
 		@include media-breakpoint-up(xxl) {
 			max-width: 36%;
+		}
+		@include media-breakpoint-down(xxl) {
+			padding-right: 0 !important;
 		}
 	}
 
 	&__slide {
+		height: auto;
 		@include media-breakpoint-down(xxl) {
 			width: rem(350);
 		}
 		@include media-breakpoint-down(sm) {
-			width: 290px;
+			width: 296px;
 		}
 		background: #FFFFFF;
 		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
 		border-radius: 8px;
 		margin-bottom: 20px;
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			.sOurTeam__imgBg {
 				transform: rotate(-76.14deg);
 			}
@@ -72,7 +76,7 @@
 	}
 
 	&__imgWrap {
-		@include media-breakpoint-up(xxl) {
+		@include media-breakpoint-up(xxxl) {
 			margin-top: -22px;
 		}
 		margin-right: -10px;
@@ -92,6 +96,7 @@
 		@include media-breakpoint-up(xxl) {
 			width: 120px;
 			height: 120px;
+			left: 0;
 		}
 		@include media-breakpoint-up(xxxl) {
 			width: 147px;
@@ -103,7 +108,6 @@
 		}
 		position: absolute;
 		z-index: -1;
-		left: 0;
 		@include media-breakpoint-only(xxl) {
 			bottom: auto;
 			top: 20px;

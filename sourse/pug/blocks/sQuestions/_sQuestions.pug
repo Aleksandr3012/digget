@@ -45,22 +45,22 @@ mixin sQuestions(data)
 	// end sQuestions
 
 mixin questionItem(headerTxt,t,active)
-	+e.item.q-item-js&attributes(attributes)
-		+e.header!= headerTxt 
+	+e.item&attributes(attributes)
+		+e.header--js!= headerTxt 
 			+e.iconWrap
 				+icon('chevron-right-white')
 		if active
 			if block
-				+e.content.q-content-js(style="display: block")
+				+e.content--js(style="display: block")
 					block
 			else
-				+e.content.q-content-js(style="display: block")!= t
+				+e.content--js(style="display: block")!= t
 		else
 			if block
-				+e.content.q-content-js
+				+e.content--js
 					block
 			else
-				+e.content.q-content-js!= t
+				+e.content--js!= t
 				
 
 

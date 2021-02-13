@@ -350,46 +350,65 @@ function eventHandler() {
 			loadPrevNextAmount: 8
 		}
 	}); // modal window
-	// let qItem = document.querySelectorAll(".sQuestions .q-item-js");
-	// qItem.forEach(function (el) {
-	// 	el.addEventListener('click', function () {
-	// 		let allItems = document.querySelectorAll('.q-item-js');
-	// 		let self = this;
-	// 		for (let item of allItems) {
-	// 			let currContent = item.querySelector('.q-content-js');
-	// 			if (item === self) {
-	// 				item.classList.toggle('active');
-	// 				currContent.classList.toggle('active');
-	// 			}
-	// 			else {
-	// 				item.classList.remove('active');
-	// 				currContent.classList.remove('active');
-	// 			}
-	// 		}
-	// 	})
-	// })
 
-	$('.sQuestions .q-item-js').on('click', function () {
-		$(this).toggleClass('active').find('.q-content-js').slideToggle().toggleClass('active');
-	});
+	function makeDDGroup(qSelecorts) {
+		var _iterator = _createForOfIteratorHelper(qSelecorts),
+				_step;
+
+		try {
+			for (_iterator.s(); !(_step = _iterator.n()).done;) {
+				var parentSelect = _step.value;
+				var parent = document.querySelector(parentSelect);
+
+				if (parent) {
+					(function () {
+						// childHeads, kind of funny))
+						var ChildHeads = parent.querySelectorAll('.sQuestions__header--js');
+						$(ChildHeads).click(function () {
+							var clickedHead = this;
+							$(ChildHeads).each(function () {
+								if (this === clickedHead) {
+									$(this.parentElement).toggleClass('active');
+									$(this.parentElement).find('.sQuestions__content--js').slideToggle(function () {
+										$(this).toggleClass('active');
+									});
+								} else {
+									$(this.parentElement).removeClass('active');
+									$(this.parentElement).find('.sQuestions__content--js').slideUp(function () {
+										$(this).removeClass('active');
+									});
+								}
+							});
+						});
+					})();
+				}
+			}
+		} catch (err) {
+			_iterator.e(err);
+		} finally {
+			_iterator.f();
+		}
+	}
+
+	makeDDGroup(['.sQuestions', '.dd-price-js']);
 	$('.drop-accardion-js').on('click', function () {
 		$(this).parent().toggleClass('active');
 		$(this).parent().find('.drop-accardion-toggle-js').toggle();
 	});
 	var flyItems = document.querySelectorAll('.fly-items-js');
 
-	var _iterator = _createForOfIteratorHelper(flyItems),
-			_step;
+	var _iterator2 = _createForOfIteratorHelper(flyItems),
+			_step2;
 
 	try {
-		for (_iterator.s(); !(_step = _iterator.n()).done;) {
-			var item = _step.value;
+		for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+			var item = _step2.value;
 			var parallaxInstance = new Parallax(item);
 		}
 	} catch (err) {
-		_iterator.e(err);
+		_iterator2.e(err);
 	} finally {
-		_iterator.f();
+		_iterator2.f();
 	}
 }
 

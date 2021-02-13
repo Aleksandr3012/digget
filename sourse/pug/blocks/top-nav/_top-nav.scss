@@ -2,7 +2,7 @@
 	// position: sticky; 
 	// top: 0;
 	// left: 0;
-	// z-index: 800;
+	
 	padding-top: rem(15);
 	padding-bottom: rem(15);
 	@include media-breakpoint-up(md) {
@@ -11,6 +11,8 @@
 	}
 	@include media-breakpoint-down(lg) {
 		background-color: #fff;
+		position: relative;
+		z-index: 80;
 	}
 
 	&.fixed { 
@@ -36,6 +38,14 @@
 		}
 		@include media-breakpoint-up(xxxl) {
 			margin-right: rem(157);
+		}
+		@include media-breakpoint-down(md) {
+			width: rem(82px);
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
 		}
 	}
 

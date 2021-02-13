@@ -28,7 +28,7 @@ mixin mnu()
 
 	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		+e.LI.item.dropdown( itemprop="item" )
-			+e.A.link(href='#'  itemprop="url") Услуги
+			+e.link Услуги
 			.drop-open.drop-accardion-js
 				img(src="img/svg/chevron-down.svg", alt="")
 			+b.UL.drop.drop-accardion-toggle-js
@@ -55,7 +55,7 @@ mixin mnu()
 							+e.subtitle Акции, варианты сотрудничества, список партнеров.
 			//- +b.Ul.drop
 		+e.LI.item.dropdown( itemprop="item" )
-			+e.A.link(href='#'  itemprop="url") Компания
+			+e.link Компания
 			.drop-open.drop-accardion-js
 				img.res-i(src="img/svg/chevron-down.svg", alt="")
 			+b.UL.drop.drop-accardion-toggle-js

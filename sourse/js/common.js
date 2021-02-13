@@ -352,30 +352,36 @@ function eventHandler() {
 	});
 	// modal window
 
-	// let qItem = document.querySelectorAll(".sQuestions .q-item-js");
-	// qItem.forEach(function (el) {
-	// 	el.addEventListener('click', function () {
-	// 		let allItems = document.querySelectorAll('.q-item-js');
-	// 		let self = this;
 
-	// 		for (let item of allItems) {
-	// 			let currContent = item.querySelector('.q-content-js');
 
-	// 			if (item === self) {
-	// 				item.classList.toggle('active');
-	// 				currContent.classList.toggle('active');
-	// 			}
-	// 			else {
-	// 				item.classList.remove('active');
-	// 				currContent.classList.remove('active');
-	// 			}
-	// 		}
-	// 	})
-	// })
+	function makeDDGroup(qSelecorts){
+    for (let parentSelect of qSelecorts){
+      let parent = document.querySelector(parentSelect);
+      if (parent){
+        // childHeads, kind of funny))
+        let ChildHeads = parent.querySelectorAll('.sQuestions__header--js');
+        $(ChildHeads).click(function (){
+          let clickedHead = this;
+          $(ChildHeads).each(function (){
+            if (this === clickedHead){
+              $(this.parentElement).toggleClass('active');
+              $(this.parentElement).find('.sQuestions__content--js').slideToggle(function (){
+                $(this).toggleClass('active');
+              });
+            }
+            else{
+              $(this.parentElement).removeClass('active');
+              $(this.parentElement).find('.sQuestions__content--js').slideUp(function (){
+                $(this).removeClass('active');
+              });
+            }
+          });
+        });
+      }
+    }
+  }
+  makeDDGroup(['.sQuestions', '.dd-price-js']);
 
-	$('.sQuestions .q-item-js').on('click', function(){
-		$(this).toggleClass('active').find('.q-content-js').slideToggle().toggleClass('active');
-	})
 
 	$('.drop-accardion-js').on('click', function(){
 		$(this).parent().toggleClass('active');

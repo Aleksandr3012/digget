@@ -135,6 +135,7 @@
 	}
 
 	&__content {
+		@extend .mono2;
 		display: none;
 		padding: rem(10) rem(0) rem(0) rem(16);
 		@include media-breakpoint-up(sm) {
@@ -207,7 +208,7 @@
 			margin-bottom: rem(24);
 			font-size: $h6-font-size;
 			line-height: calc(21/18);
-			// @extend .mono2;
+			@extend .mono;
 		}
 	}
 

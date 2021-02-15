@@ -14,6 +14,12 @@
 		position: relative;
 		z-index: 80;
 	}
+	@include media-breakpoint-down(md) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
 
 	&.fixed { 
 		bottom: auto;

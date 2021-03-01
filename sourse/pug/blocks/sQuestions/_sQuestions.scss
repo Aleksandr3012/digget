@@ -202,13 +202,13 @@
 		// justify-content: center;
 
 		p {
-			max-width: 220px;
+			max-width: 210px;
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: rem(24);
 			font-size: $h6-font-size;
 			line-height: calc(21/18);
-			@extend .mono;
+			@extend .mono2;
 		}
 	}
 

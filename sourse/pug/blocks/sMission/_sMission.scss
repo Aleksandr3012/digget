@@ -12,6 +12,9 @@
 	h1 {
 		margin-bottom: rem(24);
 		line-height: calc(63/48);
+		@include media-breakpoint-only(xxl) {
+			font-size: 3.1rem;
+		}
 	}
 
 	h4 {

@@ -9,9 +9,9 @@ $file-format: woff2 woff;
 // If font from googlefont, next lines remove
 
 @include font-face ($mono, $addr + "FontAwesome", $file-formats: $file-format);
-// @include font-face ($mono, $addr + "Roboto-Bold/Roboto-Bold", bold, $file-formats: $file-format);
-// @include font-face ($mono, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
-// @include font-face ($mono, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "RobotoSlab-Regular", $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "RobotoSlab-Medium", 500, $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "RobotoSlab-Bold", bold, $file-formats: $file-format);
 
 // font-weight helper:
 
